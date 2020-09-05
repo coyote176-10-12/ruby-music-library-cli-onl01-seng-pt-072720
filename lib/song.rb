@@ -26,7 +26,7 @@ class Song
     genre.add_song(self)
   end
   
-  def destroy_all
+  def self.destroy_all
     @@all= []
   end
   
