@@ -20,7 +20,11 @@ class Genre
     @@all << self
   end
   
-  
+   def self.create(name)
+    new_genre = new(name)
+    new_genre.save
+    new_gemre
+  end
 
 
 
