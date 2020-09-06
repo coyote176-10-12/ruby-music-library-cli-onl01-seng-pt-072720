@@ -4,20 +4,18 @@ class Song
   
   @@all= []
   
-  def initialize(name,artist=nil,genre=nil)
+   def initialize(name,artist=nil,genre=nil)
     @name = name
     # @artist = artist
     self.artist=(artist) if !artist.nil?
     # @genre = genre
     self.genre=(genre) if !genre.nil?
-  end
+   end
   
-  def self.all
+   def self.all
     @@all
- end
+   end
  
-  
-  
   def self.destroy_all
     @@all= []
   end
@@ -26,13 +24,21 @@ class Song
     @@all << self
   end
   
+  def artist=(artist)
+    @artist = artist
+    artist.add_song(self)
+  end
   
+   def genre=(genre)
+    @genre = genre
+    genre.add_song(self)
+  end
   
- def self.create(name)
-  created_song = self.new(name)
-  created_song.save
-  created_song
-end
+  def self.create(name)
+    created_song = self.new(name)
+    created_song.save
+    created_song
+  end
 
   
 end 
