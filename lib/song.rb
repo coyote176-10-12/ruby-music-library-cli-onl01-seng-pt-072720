@@ -40,6 +40,11 @@ class Song
     created_song
   end
   
+  def new_from_file 
+  
+  
+  end
+  
   
 
   
