@@ -27,9 +27,6 @@ class Artist
     @@all << self
   end
   
-   def add_song
-    
-  end
   
   def artists
     songs.collect{|s| s.artist }.uniq
