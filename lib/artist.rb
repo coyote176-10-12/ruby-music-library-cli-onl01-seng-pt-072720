@@ -10,7 +10,11 @@ class Artist
     @@all
   end
   
-  
+  def self.create(name)
+    new_artist = new(name)
+    new_artist.save
+    new_artist
+  end
   
   def self.destroy_all
     @@all = []
