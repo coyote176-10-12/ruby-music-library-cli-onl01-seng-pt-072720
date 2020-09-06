@@ -19,7 +19,7 @@ class Artist
   end
   
   def artist
-  
+    @artist= artist
   end
   
   
