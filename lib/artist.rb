@@ -28,6 +28,8 @@ class Artist
   end
   
   
+  
+  
   def artists
     songs.collect{|s| s.artist }.uniq
   end
