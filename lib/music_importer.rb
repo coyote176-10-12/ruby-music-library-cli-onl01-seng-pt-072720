@@ -6,13 +6,8 @@ class MusicImporter
   end
   
   def files
-    #Dir.chdir @path do
-     # @files = Dir.glob('*.mp3')
-   # end
- # end
-  filename = Dir.glob("#{path}/*.mp3")
-    filename = filename.collect{|a_string| a_string.sub("#{path}/", "")}
-  
+   filename = Dir.glob("#{path}/*.mp3")
+   filename = filename.collect{|a_string| a_string.sub("#{path}/", "")}
   end
 
 end
