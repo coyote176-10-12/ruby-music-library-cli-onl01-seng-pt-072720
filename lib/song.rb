@@ -40,7 +40,7 @@ class Song
     created_song
   end
   
-  def new_from_filename 
+  def new_from_filename(file_name)
     cleaned = file_name.split(".mp3")[0]
     parsed = cleaned.split(" - ")
     artist_name = parsed[0]
