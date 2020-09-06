@@ -16,15 +16,7 @@ class Song
     @@all
  end
  
-  def artist=(artist)
-    @artist = artist
-    artist.add_song(self)
-  end
   
-   def genre=(genre)
-    @genre = genre
-    genre.add_song(self)
-  end
   
   def self.destroy_all
     @@all= []
@@ -33,6 +25,8 @@ class Song
   def save
     @@all << self
   end
+  
+  
   
  def self.create(name)
   created_song = self.new(name)
